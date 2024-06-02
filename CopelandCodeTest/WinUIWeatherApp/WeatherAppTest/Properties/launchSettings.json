@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "WeatherAppTest (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "WeatherAppTest (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}
