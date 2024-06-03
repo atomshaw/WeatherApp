@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WeatherApp", "WeatherApp.cs
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenWeatherMap", "..\OpenWeatherMap\OpenWeatherMap.csproj", "{4479B8B6-09C9-4E98-B6DA-BD480762F4D3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherProviderTest", "..\WeatherProviderTest\WeatherProviderTest.csproj", "{BEFAC6CE-C683-413B-80F7-78120B8A04B1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -59,6 +61,22 @@ Global
 		{4479B8B6-09C9-4E98-B6DA-BD480762F4D3}.Release|x64.Build.0 = Release|Any CPU
 		{4479B8B6-09C9-4E98-B6DA-BD480762F4D3}.Release|x86.ActiveCfg = Release|Any CPU
 		{4479B8B6-09C9-4E98-B6DA-BD480762F4D3}.Release|x86.Build.0 = Release|Any CPU
+		{BEFAC6CE-C683-413B-80F7-78120B8A04B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BEFAC6CE-C683-413B-80F7-78120B8A04B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BEFAC6CE-C683-413B-80F7-78120B8A04B1}.Debug|ARM64.ActiveCfg = Debug|Any CPU
+		{BEFAC6CE-C683-413B-80F7-78120B8A04B1}.Debug|ARM64.Build.0 = Debug|Any CPU
+		{BEFAC6CE-C683-413B-80F7-78120B8A04B1}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{BEFAC6CE-C683-413B-80F7-78120B8A04B1}.Debug|x64.Build.0 = Debug|Any CPU
+		{BEFAC6CE-C683-413B-80F7-78120B8A04B1}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{BEFAC6CE-C683-413B-80F7-78120B8A04B1}.Debug|x86.Build.0 = Debug|Any CPU
+		{BEFAC6CE-C683-413B-80F7-78120B8A04B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BEFAC6CE-C683-413B-80F7-78120B8A04B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BEFAC6CE-C683-413B-80F7-78120B8A04B1}.Release|ARM64.ActiveCfg = Release|Any CPU
+		{BEFAC6CE-C683-413B-80F7-78120B8A04B1}.Release|ARM64.Build.0 = Release|Any CPU
+		{BEFAC6CE-C683-413B-80F7-78120B8A04B1}.Release|x64.ActiveCfg = Release|Any CPU
+		{BEFAC6CE-C683-413B-80F7-78120B8A04B1}.Release|x64.Build.0 = Release|Any CPU
+		{BEFAC6CE-C683-413B-80F7-78120B8A04B1}.Release|x86.ActiveCfg = Release|Any CPU
+		{BEFAC6CE-C683-413B-80F7-78120B8A04B1}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
