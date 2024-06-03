@@ -1,8 +1,6 @@
-WinUI-based Weather lookup app
+This App runs on .net version 8 utilizing WinUI and requires Windows to run.
 
-This App runs on .net version 8 and requires windows. 
-
-Dependencies: I have relied on CoderPro.OpenWeatherMaps.Wrapper NuGet package. 
+Dependencies: I have relied on CoderPro.OpenWeatherMaps.Wrapper NuGet package to make the api calls. 
 *GitHubLink: https://github.com/coderpros/CoderPro.OpenWeatherMap*
 
 Once launched you will be presented with a text box and search button. 
