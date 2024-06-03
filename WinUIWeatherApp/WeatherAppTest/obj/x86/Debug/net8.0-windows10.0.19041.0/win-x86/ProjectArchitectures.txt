@@ -1,2 +1,0 @@
-C:\Code\CopelandCodeTest\WinUIWeatherApp\WeatherApp\WeatherApp.csproj;x86
-C:\Code\CopelandCodeTest\WinUIWeatherApp\WeatherAppTest\WeatherAppTest.csproj;x86
