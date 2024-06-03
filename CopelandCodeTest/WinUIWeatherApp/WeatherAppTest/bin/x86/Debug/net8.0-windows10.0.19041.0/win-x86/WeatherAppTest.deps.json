@@ -1167,11 +1167,22 @@
       },
       "System.Memory/4.5.4": {},
       "System.Reflection.Metadata/1.6.0": {},
-      "WeatherApp/1.0.0": {
+      "OpenWeatherMap/1.0.0": {
         "dependencies": {
           "CoderPro.OpenWeatherMap.Wrapper": "1.0.1",
           "Microsoft.Windows.SDK.BuildTools": "10.0.22621.756",
           "Microsoft.WindowsAppSDK": "1.5.240428000"
+        },
+        "runtime": {
+          "OpenWeatherMap.dll": {}
+        }
+      },
+      "WeatherApp/1.0.0": {
+        "dependencies": {
+          "CoderPro.OpenWeatherMap.Wrapper": "1.0.1",
+          "Microsoft.Windows.SDK.BuildTools": "10.0.22621.756",
+          "Microsoft.WindowsAppSDK": "1.5.240428000",
+          "OpenWeatherMap": "1.0.0"
         },
         "runtime": {
           "WeatherApp.dll": {}
@@ -1286,6 +1297,11 @@
       "sha512": "sha512-COC1aiAJjCoA5GBF+QKL2uLqEBew4JsCkQmoHKbN3TlOZKa2fKLz5CpiRQKDz0RsAOEGsVKqOD5bomsXq/4STQ==",
       "path": "system.reflection.metadata/1.6.0",
       "hashPath": "system.reflection.metadata.1.6.0.nupkg.sha512"
+    },
+    "OpenWeatherMap/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "WeatherApp/1.0.0": {
       "type": "project",

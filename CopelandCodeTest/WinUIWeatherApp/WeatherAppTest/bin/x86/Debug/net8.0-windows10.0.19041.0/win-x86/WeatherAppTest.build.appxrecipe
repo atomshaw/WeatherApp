@@ -937,6 +937,12 @@
     <AppxPackagedFile Include="C:\Users\AtomS\.nuget\packages\mstest.testframework\3.1.1\build\net6.0\winui\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll">
       <PackagePath>Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Code\CopelandCodeTest\WinUIWeatherApp\OpenWeatherMap\bin\Debug\net8.0-windows10.0.19041.0\OpenWeatherMap.dll">
+      <PackagePath>OpenWeatherMap.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Code\CopelandCodeTest\WinUIWeatherApp\OpenWeatherMap\bin\Debug\net8.0-windows10.0.19041.0\OpenWeatherMap.pri">
+      <PackagePath>OpenWeatherMap.pri</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\AtomS\.nuget\packages\mstest.testframework\3.1.1\build\net6.0\winui\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml">
       <PackagePath>Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml</PackagePath>
     </AppxPackagedFile>

@@ -26,7 +26,7 @@ namespace WeatherAppTest
             Assert.AreEqual(0, grid.MinWidth);
         }
 
-        [TestMethod]
+        [UITestMethod]
         public async Task ParseInputAndGeoCode_ValidLatLon_ReturnsGeoCodedResponse()
         {
             // Arrange
@@ -38,8 +38,7 @@ namespace WeatherAppTest
 
             // Assert
             Assert.IsNotNull(result);
-            Assert.AreEqual("New York", result.Name);
-            Assert.IsInstanceOfType(result.Coordinates, typeof(Point));
+            Assert.AreEqual("New York", result.CityName);
         }
     }
 }

@@ -1,18 +1,17 @@
 using Microsoft.UI.Xaml;
-using System;
-using CoderPro.OpenWeatherMap.Wrapper;
-using System.Threading.Tasks;
-using CoderPro.OpenWeatherMap.Wrapper.Models.CurrentWeather;
 using Microsoft.UI.Xaml.Media.Imaging;
 using NetTopologySuite.Geometries;
-using Microsoft.UI.Xaml.Controls;
-using NetTopologySuite.Utilities;
+using OpenWeatherMap.Interface;
+using OpenWeatherMap.Models;
+using System;
+using System.Threading.Tasks;
 
 namespace WeatherApp
 {
     public sealed partial class MainWindow : Window
     {
-        string apiKey = "eb85dcf61ed99b245c4d8c24bbab241b";
+        IWeatherProvider _provider =  new OpenWeatherMap.OpenWeatherMap();
+        
         public MainWindow()
         {
             this.InitializeComponent();
@@ -25,12 +24,10 @@ namespace WeatherApp
 
         private async void GetWeather(string query)
         {
-            var geoCodeResponse = await ParseInputAndGeoCode(query);
-            if (geoCodeResponse != null)
+            var weatherData = await ParseInputAndGeoCode(query);
+            if (weatherData != null)
             {
-                var openWeatherClient = new CurrentWeatherClient(apiKey);
-                var result = await openWeatherClient.QueryByCoordinatesAsync(SearchType.Coordinate, geoCodeResponse.Coordinates);
-                PopulateUI(result);
+                PopulateUI(weatherData);
             }
             else
             {
@@ -44,83 +41,36 @@ namespace WeatherApp
             await this.errorDialog.ShowAsync();
         }
 
-        public async Task<GeoCodedResponse> ParseInputAndGeoCode(string input)
+        public async Task<WeatherResponse> ParseInputAndGeoCode(string input)
         {
             if (input.Contains(','))
             {
-                return await GeoReverseLatLonLookup(input);
+                return await _provider.GeoReverseLatLonLookup(input);
             }
             if (Double.TryParse(input, out _))
             {
-                return await GeoPostCode(input);
+                return await _provider.GeoPostCode(input);
             }
-            return await GeoSearch(input);
+            return await _provider.GeoSearch(input);
         }
-        private async Task<GeoCodedResponse> GeoSearch(string input)
-        {
-            var geoCodeClient = new GeoCodingClient(apiKey);
-            try
-            {
-                var res = await geoCodeClient.QueryCoordinatesAsync(input);
-                return new GeoCodedResponse { Name = res.LocationList[0].Name, Coordinates = res.LocationList[0].Coordinates };
-            }
-            catch
-            {
-                return null;
-            }
-        }
-
-        private async Task<GeoCodedResponse> GeoPostCode(string input)
-        {
-            var geoCodeClient = new GeoCodingClient(apiKey);
-            try
-            {
-                var res = await geoCodeClient.QueryCoordinatesByPostCodeAsync(input);
-                return new GeoCodedResponse { Name = res.Name, Coordinates = res.Coordinate };
-            }
-            catch
-            {
-                return null;
-            }
-        }
-
-        private async Task<GeoCodedResponse> GeoReverseLatLonLookup(string input)
-        {
-            var latlon = input.Split(',');
-            if (latlon.Length != 2) { return null; }
-            var geoCodeClient = new GeoCodingClient(apiKey);
-            try
-            {
-                var point = new Point(new Coordinate(Double.Parse(latlon[0].Trim()), Double.Parse(latlon[1].Trim())));
-                var res = await geoCodeClient.QueryReverseAsync(point);
-                return new GeoCodedResponse { Name = res.LocationList[0].Name, Coordinates = res.LocationList[0].Coordinates };
-            }
-            catch
-            {
-                return null;
-            }
-
-        }
-
-        private void PopulateUI(QueryResponse response)
+        private void PopulateUI(WeatherResponse response)
         {
             try
             {
-                var iconSrc = $"https://openweathermap.org/img/wn/{response.WeatherList[0].Icon}@2x.png";
-                WeatherIcon.Source = new BitmapImage(new Uri(iconSrc));
+                WeatherIcon.Source = new BitmapImage(new Uri(response.IconURL));
             }
             catch 
             {
                //Can't find image icon, move on
             }
-            var temperature = string.Format("{0:N0} °F", (int)response.Main.Temperature.FahrenheitCurrent);
-            var feelslike = string.Format("{0:N0} °F", (int)response.Main.Temperature.FahrenheitFeelsLike);
-            this.CityName.Text = "City (Observed): " + response.Name;
+            var temperature = string.Format("{0:N0} °F", (int)response.CurrentTemp);
+            var feelslike = string.Format("{0:N0} °F", (int)response.FeelsLikeTemp);
+            this.CityName.Text = "City (Observed): " + response.CityName;
             this.WeatherTemp.Text = "Temperature: " +  temperature;
             this.WeatherFeelsLike.Text = "Feels Like: " + feelslike;
-            this.WeatherDescription.Text = "Weather Description: " + response.WeatherList[0].Description ?? "";
-            this.WeatherHumidity.Text = "Humidity: " + response.Main.Humidity.ToString() + "%" ?? "";
-            this.WeatherPressure.Text = "Pressure: " + response.Main.Pressure.ToString() + " hPa" ?? "";
+            this.WeatherDescription.Text = "Weather Description: " + response.WeatherDescription ?? "";
+            this.WeatherHumidity.Text = "Humidity: " + response.Humidity + "%" ?? "";
+            this.WeatherPressure.Text = "Pressure: " + response.Pressure + " hPa" ?? "";
         }
 
         private void ClearUI()

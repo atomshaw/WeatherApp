@@ -12,6 +12,7 @@
           "CoderPro.OpenWeatherMap.Wrapper": "1.0.1",
           "Microsoft.Windows.SDK.BuildTools": "10.0.22621.756",
           "Microsoft.WindowsAppSDK": "1.5.240428000",
+          "OpenWeatherMap": "1.0.0",
           "runtimepack.Microsoft.NETCore.App.Runtime.win-x86": "8.0.5",
           "runtimepack.Microsoft.Windows.SDK.NET.Ref": "10.0.19041.31"
         },
@@ -855,7 +856,17 @@
           }
         }
       },
-      "System.Memory/4.5.4": {}
+      "System.Memory/4.5.4": {},
+      "OpenWeatherMap/1.0.0": {
+        "dependencies": {
+          "CoderPro.OpenWeatherMap.Wrapper": "1.0.1",
+          "Microsoft.Windows.SDK.BuildTools": "10.0.22621.756",
+          "Microsoft.WindowsAppSDK": "1.5.240428000"
+        },
+        "runtime": {
+          "OpenWeatherMap.dll": {}
+        }
+      }
     }
   },
   "libraries": {
@@ -915,6 +926,11 @@
       "sha512": "sha512-1MbJTHS1lZ4bS4FmsJjnuGJOu88ZzTT2rLvrhW7Ygic+pC0NWA+3hgAen0HRdsocuQXCkUTdFn9yHJJhsijDXw==",
       "path": "system.memory/4.5.4",
       "hashPath": "system.memory.4.5.4.nupkg.sha512"
+    },
+    "OpenWeatherMap/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     }
   },
   "runtimes": {

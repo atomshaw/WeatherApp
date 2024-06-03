@@ -345,6 +345,10 @@ C:\Code\CopelandCodeTest\WinUIWeatherApp\WeatherAppTest\bin\x86\Debug\net8.0-win
 C:\Code\CopelandCodeTest\WinUIWeatherApp\WeatherAppTest\bin\x86\Debug\net8.0-windows10.0.19041.0\win-x86\NetTopologySuite.dll
 C:\Code\CopelandCodeTest\WinUIWeatherApp\WeatherAppTest\bin\x86\Debug\net8.0-windows10.0.19041.0\win-x86\WeatherApp.dll
 C:\Code\CopelandCodeTest\WinUIWeatherApp\WeatherAppTest\bin\x86\Debug\net8.0-windows10.0.19041.0\win-x86\WeatherApp.pdb
+C:\Code\CopelandCodeTest\WinUIWeatherApp\WeatherAppTest\bin\x86\Debug\net8.0-windows10.0.19041.0\win-x86\OpenWeatherMap.dll
+C:\Code\CopelandCodeTest\WinUIWeatherApp\WeatherAppTest\bin\x86\Debug\net8.0-windows10.0.19041.0\win-x86\OpenWeatherMap.pdb
+C:\Code\CopelandCodeTest\WinUIWeatherApp\WeatherAppTest\bin\x86\Debug\net8.0-windows10.0.19041.0\win-x86\OpenWeatherMap.pri
+C:\Code\CopelandCodeTest\WinUIWeatherApp\WeatherAppTest\obj\x86\Debug\net8.0-windows10.0.19041.0\win-x86\WeatherAppTest.sourcelink.json
 C:\Code\CopelandCodeTest\WinUIWeatherApp\WeatherAppTest\bin\x86\Debug\net8.0-windows10.0.19041.0\win-x86\Assets\LockScreenLogo.scale-200.png
 C:\Code\CopelandCodeTest\WinUIWeatherApp\WeatherAppTest\bin\x86\Debug\net8.0-windows10.0.19041.0\win-x86\Assets\SplashScreen.scale-200.png
 C:\Code\CopelandCodeTest\WinUIWeatherApp\WeatherAppTest\bin\x86\Debug\net8.0-windows10.0.19041.0\win-x86\Assets\Square150x150Logo.scale-200.png
