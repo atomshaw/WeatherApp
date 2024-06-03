@@ -84,13 +84,5 @@ namespace WeatherApp
             this.WeatherPressure.Text = string.Empty;
             this.Search.Text = string.Empty;
         }
-
-        public class GeoCodedResponse
-        {
-            public string Name { get; set; }
-            public Point Coordinates { get; set; }
-        }
-
-
     }
 }

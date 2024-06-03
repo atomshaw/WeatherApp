@@ -8,7 +8,7 @@ namespace OpenWeatherMap.Models
 {
     public class WeatherResponse
     {
-        public string IconURL { get; set; }//$"https://openweathermap.org/img/wn/{response.WeatherList[0].Icon}@2x.png"
+        public string IconURL { get; set; }
         public string CityName { get; set; }
         public double CurrentTemp { get; set; } = 0;
         public double FeelsLikeTemp { get; set; } = 0;
