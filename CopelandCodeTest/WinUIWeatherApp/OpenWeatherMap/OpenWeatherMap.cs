@@ -1,10 +1,10 @@
 using CoderPro.OpenWeatherMap.Wrapper;
-using NetTopologySuite.Geometries;
-using OpenWeatherMap.Models;
-using System.Threading.Tasks;
-using System;
 using CoderPro.OpenWeatherMap.Wrapper.Models.CurrentWeather;
+using NetTopologySuite.Geometries;
 using OpenWeatherMap.Interface;
+using OpenWeatherMap.Models;
+using System;
+using System.Threading.Tasks;
 
 
 namespace OpenWeatherMap

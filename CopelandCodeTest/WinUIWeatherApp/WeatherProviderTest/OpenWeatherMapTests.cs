@@ -1,7 +1,4 @@
-﻿using OpenWeatherMap;
-using OpenWeatherMap.Models;
-using System.Threading.Tasks;
-using Xunit;
+﻿using OpenWeatherMap.Models;
 
 namespace WeatherProviderTest
 {
@@ -60,6 +57,19 @@ namespace WeatherProviderTest
         {
             // Arrange
             string input = "1000155555555";
+
+            // Act
+            var result = await _weatherProvider.GeoPostCode(input);
+
+            // Assert
+            Assert.Null(result);
+        }
+
+        [Fact]
+        public async Task GeoReverseLatLonLookup_NonValidInput_ReturnsNull()
+        {
+            // Arrange
+            string input = "-77,";
 
             // Act
             var result = await _weatherProvider.GeoPostCode(input);
